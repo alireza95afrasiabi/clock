@@ -1,72 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    main{
-        width: 100%;
-        height: 100vh;
-        background-color: rgb(186, 235, 255);
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    div{
-        width: 51%;
-        height: 80px;
-        /* border-bottom: 5px solid darkblue; */
-        color: darkblue;
-        font-size: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    main>div:nth-of-type(2){
-        width: 51%;
-        height: 1px;
-        box-shadow:0px 0px 15px darkblue;
-    }
-</style>
+<link rel="stylesheet" href="./style.css">
+
 <body>
     <main>
         <div id="time"></div>
         <div></div>
     </main>
 </body>
-<script>
-    function _afra(){
-  
-        let _t = new Date()
-        let _h = _t.getHours()
-        let _m = _t.getMinutes()
-        let _s = _t.getSeconds()
-        
-        let _time = document.getElementById('time')
+<script src="./script.js"></script>
 
-        _time.innerHTML = _h + ' : ' + _m + ' : ' + _s;
- 
-        if(_h<10){
-            _time.innerHTML = '0' + _h + ' : ' + _m + ' : ' + _s;
-        }
-        if(_m<10){
-            _time.innerHTML = _h + ' : ' + '0' + _m + ' : ' + _s;
-        }
-        if(_s<10){
-            _time.innerHTML = _h + ' : ' + _m + ' : ' + '0' + _s;
-        }
-       
-        setTimeout(_afra, 1000)
-    }
-    _afra()
-</script>
 </html>
